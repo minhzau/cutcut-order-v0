@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cút Cút! — Thế giới trứng nhỏ, vị ngon thật to</title>
+  <link rel="icon" type="image/png" href="/assets/cutcut-chick-favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/cutcut-chick-favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" /><link rel="stylesheet" href="order-tracking.css" />
+  <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="chat.css" /><link rel="stylesheet" href="voice-call.css" /><link rel="stylesheet" href="customer-v0.css" /><link rel="stylesheet" href="customer-v1.css" /><link rel="stylesheet" href="official-v1.css" /><link rel="stylesheet" href="customer-enhancements.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Cút Cút! - Trang chủ">
+      <span class="brand-mark">CÚT</span><span class="brand-dot">•</span><span class="brand-mark">CÚT!</span>
+    </a>
+    <nav aria-label="Điều hướng chính">
+      <a href="#story">Chuyện nhà Cút</a>
+      <a href="#collections">Sản phẩm</a>
+      <a href="#trust">An tâm chọn</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" aria-label="Tìm kiếm">⌕</button>
+      <button class="orders-button" id="open-orders">Đơn của tôi</button><button class="cart-button" id="open-cart">Giỏ trứng <span id="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero"><div class="hero-copy"><div class="kicker"><span></span>MÓN NGON TỪ TRỨNG CÚT</div><h1>Nhỏ xinh.<br><em>Vị mê ly.</em></h1><p class="lead">Trứng cút xào me đậm đà, làm mới khi có đơn. Một trải nghiệm ăn vặt vừa thân quen vừa cực cuốn.</p><div class="hero-actions"><a class="primary-button" href="#collections">Đặt món ngay <b>↗</b></a><span class="rating"><strong>Làm mới</strong><small>Khi khách đặt món</small></span></div><div class="proof"><div><b>01</b><span>Làm mới<br>mỗi ngày</span></div><div><b>02</b><span>Sốt me<br>nhà làm</span></div><div><b>03</b><span>Giao nhanh<br>trong ngày</span></div></div></div><div class="hero-stage" id="hero-stage"><div class="stage-grid"></div><div class="stage-glow"></div><div class="stage-ring ring-one"></div><div class="stage-ring ring-two"></div><div class="stage-ring ring-three"></div><div class="float-card card-top" data-depth="1.4"><span>MÓN BÁN CHẠY</span><strong>Trứng cút xào me</strong></div><div class="product-orbit" data-depth="2.2"><div class="plate-shadow"></div><img src="assets/hero-tamarind-3d-v1.png" alt="Trứng cút xào me 3D"><div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div><div class="orbit-dot dot-three"></div></div><div class="price-orb" data-depth="1.7"><span>chỉ từ</span><strong>35K</strong></div><div class="float-card card-bottom" data-depth="1.2"><span>GIAO NHANH</span><strong>Đóng gói nóng hổi</strong></div><div class="scroll-cue">KÉO XUỐNG <i></i></div></div></section>
+
+    <section class="ticker" aria-label="Điểm nổi bật">
+      <span>TRỨNG TƯƠI MỖI NGÀY</span><i>✦</i><span>NGUỒN GỐC RÕ RÀNG</span><i>✦</i><span>ĐÓNG GÓI CẨN THẬN</span><i>✦</i><span>GIAO NHANH TRONG NGÀY</span>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story-label">CHUYỆN NHÀ CÚT</div>
+      <div class="story-copy">
+        <h2>Nhỏ bé nhưng<br>gây thương nhớ.</h2>
+        <p>Hai món chủ lực được làm khi có đơn: trứng cút xào me dễ ăn và trứng cút lộn xào me béo bùi. Sốt me nhà làm phủ óng từng quả, cân bằng vị chua, ngọt và cay nhẹ.</p>
+      </div>
+      <div class="story-stamp"><span>100%</span><small>chọn kỹ<br>mỗi ngày</small></div>
+    </section>
+
+    <section class="collections" id="collections">
+      <div class="section-heading">
+        <p>CHỌN HÔM NAY</p>
+        <h2>Chọn món<br>bạn mê.</h2>
+      </div>
+      <div class="shop-filter"><button class="active" data-filter="all">Tất cả</button><div id="category-filters"></div></div>
+      <div class="product-grid" id="product-grid"><div class="loading-products">Đang mở kho trứng...</div></div>
+    </section>
+
+    <section class="service-info" id="service-info">
+      <div class="service-intro"><span>ĐẶT MÓN AN TÂM</span><h2>Mọi thông tin<br>trước khi đặt.</h2><p>Nhắn trực tiếp cho cửa hàng để xác nhận khu vực giao, phí vận chuyển và thời gian nhận phù hợp.</p><button type="button" data-open-chat>Hỏi cửa hàng ngay <b>→</b></button></div>
+      <div class="service-cards">
+        <article><i>01</i><div><h3>Làm khi có đơn</h3><p>Món được chuẩn bị sau khi cửa hàng tiếp nhận và xác nhận đơn.</p></div></article>
+        <article><i>02</i><div><h3>Giao hàng linh hoạt</h3><p>Thời gian và phí giao phụ thuộc địa chỉ; cửa hàng sẽ xác nhận trước khi giao.</p></div></article>
+        <article><i>03</i><div><h3>Hỗ trợ trực tiếp</h3><p>Theo dõi đơn và chat với người bán ngay trên website, không cần cài ứng dụng.</p></div></article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq"><div><span>HỎI NHANH — ĐÁP GỌN</span><h2>Bạn cần biết.</h2></div><div class="faq-list"><details><summary>Khi nào đơn được bắt đầu làm?<b>＋</b></summary><p>Khi trạng thái chuyển sang “Cửa hàng đã xác nhận”, đơn đã được người bán tiếp nhận để chuẩn bị.</p></details><details><summary>Tôi theo dõi đơn ở đâu?<b>＋</b></summary><p>Bấm “Đơn của tôi”. Trạng thái sẽ tự cập nhật; nếu đổi máy, nhập mã đơn và số điện thoại đã đặt.</p></details><details><summary>Tôi muốn đổi hoặc hủy đơn thì sao?<b>＋</b></summary><p>Hãy dùng nút Chat với cửa hàng càng sớm càng tốt. Khả năng thay đổi phụ thuộc vào việc món đã được chuẩn bị hay chưa.</p></details><details><summary>Làm sao xác nhận phí giao hàng?<b>＋</b></summary><p>Nhắn địa chỉ cho cửa hàng trong khung chat để được xác nhận phí và thời gian giao trước khi nhận đơn.</p></details></div></section>
+
+    <section class="trust" id="trust">
+      <div><b>01</b><h3>Chọn tại trại</h3><p>Đối tác chăn nuôi và ngày thu hoạch được ghi nhận rõ ràng.</p></div>
+      <div><b>02</b><h3>Soi từng mẻ</h3><p>Kiểm tra ngoại quan trước khi trứng được đóng vào hộp.</p></div>
+      <div><b>03</b><h3>Giao còn tươi</h3><p>Đóng gói chống va đập và ưu tiên giao nhanh trong ngày.</p></div>
+    </section>
+  </main>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="orders-backdrop" id="orders-backdrop"></div>
+  <aside class="orders-drawer" id="orders-drawer" aria-label="Theo dõi đơn hàng" aria-hidden="true">
+    <div class="orders-head"><div><span>THEO DÕI TRỰC TIẾP</span><h2>Đơn của tôi</h2></div><button id="close-orders" aria-label="Đóng">×</button></div>
+    <form id="find-order-form" class="find-order"><p>Đặt từ máy khác? Nhập thông tin để tìm đơn.</p><div><input name="code" required placeholder="Mã đơn CC..." autocomplete="off"><input name="phone" required inputmode="tel" placeholder="Số điện thoại đặt hàng"><button>Tìm đơn</button></div><small id="find-order-error"></small></form>
+    <div class="tracked-orders" id="tracked-orders"></div>
+  </aside>
+  <button class="chat-launcher" id="chat-launcher" aria-label="Chat với người bán"><span class="chat-dot"></span><b>Chat với người bán</b></button>
+  <aside class="chat-widget" id="chat-widget" aria-hidden="true"><header><div><span class="seller-presence"></span><strong>Cút Cút hỗ trợ</strong><small>Thường trả lời trong ít phút</small></div><span class="chat-head-actions"><button id="start-call" aria-label="Gọi thoại">Gọi</button><button id="close-chat" aria-label="Đóng chat">×</button></span></header><div class="chat-messages" id="chat-messages"><div class="chat-welcome">Xin chào! Bạn cần Cút Cút tư vấn loại trứng nào?</div></div><form id="chat-form"><div class="chat-contact" id="chat-contact"><input name="customerName" required maxlength="120" placeholder="Tên của bạn"><input name="customerPhone" maxlength="30" inputmode="tel" placeholder="Số điện thoại (không bắt buộc)"></div><div class="chat-compose"><button class="voice-button" id="record-voice" type="button" aria-label="Gửi tin nhắn thoại">Voice</button><textarea name="message" maxlength="1000" rows="1" placeholder="Nhập tin nhắn..."></textarea><button type="submit">Gửi</button></div><p id="chat-error"></p></form></aside>
+  <div class="call-screen hidden" id="call-screen"><div class="call-avatar">C</div><strong>Cút Cút hỗ trợ</strong><span id="call-status">Đang gọi...</span><audio id="remote-audio" autoplay></audio><button id="end-call">Kết thúc</button></div>
+  <nav class="mobile-dock" aria-label="Điều hướng nhanh"><a href="#top"><i>⌂</i><span>Trang chủ</span></a><a href="#collections"><i>◫</i><span>Món ăn</span></a><button type="button" data-mobile-orders><i>◎</i><span>Đơn hàng</span></button><button type="button" data-mobile-chat><i>◌</i><span>Chat</span></button><button type="button" data-mobile-cart><i>▣</i><span>Giỏ <b id="mobile-cart-count">0</b></span></button></nav>
+  <div class="site-toast" id="site-toast" role="status" aria-live="polite"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Giỏ hàng" aria-hidden="true">
+    <div class="drawer-head"><div><span>GIỎ CỦA BẠN</span><h2>Giỏ trứng</h2></div><button id="close-cart" aria-label="Đóng giỏ hàng">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer"><div><span>Tạm tính</span><strong id="cart-total">0đ</strong></div><button id="checkout-button" disabled>Tiến hành đặt đơn <span>→</span></button></div>
+  </aside>
+
+  <dialog id="checkout-dialog">
+    <button class="dialog-close" id="close-checkout" aria-label="Đóng">×</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <span class="checkout-kicker">THÔNG TIN NHẬN HÀNG</span><h2>Giao trứng đến đâu?</h2>
+      <form id="checkout-form">
+        <label>Họ và tên<input name="customerName" required maxlength="120" placeholder="Nguyễn Văn An"></label>
+        <label>Số điện thoại<input name="customerPhone" required inputmode="tel" placeholder="09xx xxx xxx"></label>
+        <label class="full">Địa chỉ giao hàng<textarea name="customerAddress" required maxlength="500" placeholder="Số nhà, đường, phường/xã, quận/huyện..."></textarea></label>
+        <label class="full">Ghi chú<textarea name="customerNote" maxlength="500" placeholder="Thời gian nhận, chỉ dẫn giao hàng..."></textarea></label>
+        <div class="checkout-summary full"><span>Tổng thanh toán</span><strong id="checkout-total">0đ</strong></div>
+        <button class="submit-order full" type="submit">Tạo đơn và nhận QR thanh toán</button>
+        <p class="form-error full" id="form-error"></p>
+      </form>
+    </div>
+    <div class="order-success hidden" id="order-success"><div class="success-mark">✓</div><span>ĐẶT ĐƠN THÀNH CÔNG</span><h2 id="success-code"></h2><p>Đơn đã được gửi đến cửa hàng. Vui lòng quét QR bên dưới và ghi mã đơn trong nội dung chuyển khoản.</p><div class="qr-payment"><img src="assets/qr-thanh-toan-techcombank.jpg" alt="QR thanh toán Techcombank của Trịnh Gia Minh"></div><div class="success-total"><span>Số tiền</span><strong id="success-total"></strong></div><button id="finish-order">Hoàn tất</button></div>
+  </dialog>
+
+  <footer>
+    <div class="footer-brand">CÚT•CÚT!</div>
+    <p>Đặt món, theo dõi đơn và trò chuyện trực tiếp với cửa hàng trên mọi thiết bị.</p>
+  </footer>
+  <script src="app.js"></script><script src="chat-client.js"></script><script src="voice-call-client.js"></script><script src="customer-v0.js"></script><script src="order-tracking.js"></script><script src="customer-enhancements.js"></script>
+</body>
+</html>
