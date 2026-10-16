@@ -1,0 +1,24 @@
+name: Import CutCut source
+on:
+  push:
+    paths: ['.github/workflows/import-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Expand project source
+        shell: bash
+        run: |
+          if [ ! -f cutcut-source.zip ]; then exit 0; fi
+          unzip -o cutcut-source.zip
+          printf '.vercel/\nnode_modules/\n.env\n.env.*\n!.env.example\n' > .gitignore
+          git config user.name 'minhzau'
+          git config user.email 'minhzau@users.noreply.github.com'
+          git rm cutcut-source.zip
+          git add .
+          git commit -m 'Expand CutCut frontend, API and image assets'
+          git push
